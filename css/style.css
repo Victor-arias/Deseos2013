@@ -1,0 +1,368 @@
+/* ===== Primary Styles ========================================================
+   Author:
+   ========================================================================== */
+@font-face {
+    font-family: 'lobster_1.4regular';
+    src: url('../fonts/lobster_1.4-webfont.eot');
+    src: url('../fonts/lobster_1.4-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/lobster_1.4-webfont.woff') format('woff'),
+         url('../fonts/lobster_1.4-webfont.ttf') format('truetype'),
+         url('../fonts/lobster_1.4-webfont.svg#lobster_1.4regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html, body
+{
+	height: 100%;
+}
+body
+{
+	background: url(../img/fondo-completo.png) repeat left bottom;
+	color: #196f74;
+	font-family: 'lobster_1.4regular', sans-serif;
+	padding: 0;
+	margin: 0;
+}
+#container
+{
+	height: 100%;
+	position: relative;
+	width: 100%;
+}
+#map_canvas
+{
+	height: 100%;
+	width: 100%;
+}
+#sidebar
+{
+	font-size: 20px;
+	height: 100%;
+	overflow: auto;
+	position: absolute;
+	top: 0;
+	width: 407px;
+}
+#sidebar h1
+{
+	width: 390px;
+}
+#sidebar .advertencia
+{
+	background: rgba(255, 255, 255, 0.8);
+	background: #FFF;
+	background-image: linear-gradient(bottom, rgb(179,179,179) 0%, rgb(255,255,255) 65%);
+	background-image: -o-linear-gradient(bottom, rgb(179,179,179) 0%, rgb(255,255,255) 65%);
+	background-image: -moz-linear-gradient(bottom, rgb(179,179,179) 0%, rgb(255,255,255) 65%);
+	background-image: -webkit-linear-gradient(bottom, rgb(179,179,179) 0%, rgb(255,255,255) 65%);
+	background-image: -ms-linear-gradient(bottom, rgb(179,179,179) 0%, rgb(255,255,255) 65%);
+
+	background-image: -webkit-gradient(
+		linear,
+		left bottom,
+		left top,
+		color-stop(0, rgb(179,179,179)),
+		color-stop(0.65, rgb(255,255,255))
+	);
+	border-radius: 10px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-o-border-radius: 10px;
+	box-shadow: 0px 29px 30px -30px #333;
+	clear: both;
+	line-height: 1.1;
+	margin: 0 auto 25px;
+	padding: 15px 3%;
+	text-align: center;
+	width: 94%;
+}
+#sidebar #envio_mensaje
+{
+	background: rgba(255, 255, 255, 0.95);
+	-webkit-border-bottom-right-radius: 15px;
+	-webkit-border-bottom-left-radius: 15px;
+	-moz-border-radius-bottomright: 15px;
+	-moz-border-radius-bottomleft: 15px;
+	box-shadow: 0 0 20px #CCC;
+	border-bottom-right-radius: 15px;
+	border-bottom-left-radius: 15px;
+	padding: 15px;
+	width: 360px;
+}
+#sidebar #envio_mensaje .validar_usuario
+{
+	overflow: hidden;
+}
+#sidebar #envio_mensaje .formulario
+{
+	clear: both;
+}
+#sidebar #envio_mensaje label
+{
+	height: 20px;
+	margin-left: 5px;
+	padding-left: 30px;
+}
+#sidebar #envio_mensaje p
+{
+	margin: 0 auto 20px;
+	width: 90%;
+}
+#sidebar #envio_mensaje p:last-child
+{
+	margin-right: 0;
+}
+#sidebar #envio_mensaje p.val_twitter, 
+#sidebar #envio_mensaje p.val_email
+{
+	box-sizing: border-box;
+	float: left;
+	padding: 0 1%;
+	width: 48%;
+}
+#sidebar #envio_mensaje p.val_twitter a, 
+#sidebar #envio_mensaje p.val_email a
+{
+	background: url(../img/btns_buenos_deseos.png) no-repeat left top;
+	display: block;
+	height: 43px;
+	margin: auto;
+	text-indent: -999px;
+	width: 185px;
+}
+#sidebar #envio_mensaje p.val_email a
+{
+	background-position: left -65px;
+}
+#sidebar #envio_mensaje p.val_twitter a:hover
+{
+	background-position: -221px top;	
+}
+#sidebar #envio_mensaje p.val_email a:hover
+{
+	background-position: -221px -65px;	
+}
+#sidebar #envio_mensaje p.email_field label
+{
+	background: url(../img/icono-correo.png) no-repeat;
+}
+#sidebar #envio_mensaje p.no_tuit label
+{
+	display: inline;
+	font-size: 0.7em;
+	opacity: .35;
+	padding-left: 0px;
+}
+#sidebar #envio_mensaje input,
+#sidebar #envio_mensaje textarea
+{
+	box-shadow: inset 1px 1px 2px #ccc;
+	height: 30px;
+	width: 95%;
+}
+#sidebar #envio_mensaje input[type="checkbox"],
+#sidebar #envio_mensaje input[type="image"]
+{
+	display: inline;
+	width: auto;
+}
+#sidebar #envio_mensaje textarea
+{
+	height: 100px;
+}
+#sidebar #envio_mensaje #submit
+{
+	background: url(../img/btns_buenos_deseos.png) no-repeat left bottom;
+	border: none;
+	box-shadow: none;
+	display: block;
+	height: 48px;
+	margin: auto;
+	opacity: 0.9;
+	text-indent: -9999px;
+	width: 160px;
+}
+#sidebar #envio_mensaje #submit:hover
+{
+	background-position: -221px bottom;
+	opacity: 1;
+}
+#telemedellin
+{
+	bottom: 0;
+	display: block;
+	position: fixed;
+	right: 0;
+}
+.aviso
+{
+	background: #FFF;
+	background-image: linear-gradient(bottom, rgb(179,179,179) 0%, rgb(255,255,255) 65%);
+	background-image: -o-linear-gradient(bottom, rgb(179,179,179) 0%, rgb(255,255,255) 65%);
+	background-image: -moz-linear-gradient(bottom, rgb(179,179,179) 0%, rgb(255,255,255) 65%);
+	background-image: -webkit-linear-gradient(bottom, rgb(179,179,179) 0%, rgb(255,255,255) 65%);
+	background-image: -ms-linear-gradient(bottom, rgb(179,179,179) 0%, rgb(255,255,255) 65%);
+
+	background-image: -webkit-gradient(
+		linear,
+		left bottom,
+		left top,
+		color-stop(0, rgb(179,179,179)),
+		color-stop(0.65, rgb(255,255,255))
+	);
+	border-radius: 10px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-o-border-radius: 10px;
+	box-shadow: 0px 29px 30px -30px #333;
+	margin: 0 auto 30px;
+	padding: 10px;
+}
+.aviso span
+{
+	border: thin dashed #000;
+	border-radius: 10px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-o-border-radius: 10px;
+	display: block;
+	line-height: 1.1;
+	padding: 20px 15px;	
+	text-align: center;
+}
+.volver a
+{
+	background: #bdad66;
+	border-radius: 8px;
+	color: #FFF;
+	display: block;
+	font-size: 16px;
+	height: 24px;
+	padding-top: 7px;
+	text-align: center;
+	text-shadow: #8a7d45;
+	width: 60px;
+}
+.volver a:hover
+{
+	background: #8a7d45;
+	text-decoration: none;
+	text-shadow: #7a6f3d;
+}
+.redes a
+{
+	background: #00ACED url(../img/tw-logo.png) no-repeat left center;
+	border-radius: 5px;
+	color: #FFF;
+	display: inline-block;
+	height: 23px;
+	letter-spacing: 1px;
+	margin-left: 5px;
+	padding: 4px 7px 0 30px;
+	text-align: center;
+	text-decoration: none;
+	text-shadow: #CCC;
+}
+.redes a:hover
+{
+	/*background: #0193CA;*/
+	background-color: #1BC0FF;
+}
+.redes a:nth-child(2)
+{
+	/*background: #3B5998;*/
+	background: #4467B1 url(../img/fb-logo.png) no-repeat left center;
+}
+.redes a:nth-child(2):hover
+{
+	background-color: #314A7F;
+}
+@media only screen and (max-width:700px)
+{
+	#map_canvas
+	{
+		float: none;
+		height: 310px;
+		width: 100%;
+	}
+
+	#sidebar
+	{
+		float: none;
+		height: auto;
+		overflow: hidden;
+		position: static;
+		width: 100%;
+	}
+	#sidebar h1
+	{
+		border-top: 8px solid #379AA0;
+		width: 100%;
+	}
+	#sidebar .advertencia
+	{
+		width: 90%;
+	}
+
+	#sidebar #envio_mensaje
+	{
+		margin: auto;
+		width: 95%;
+	}
+
+	#sidebar #envio_mensaje p
+	{
+		float: none;
+		margin: 0 auto 20px;
+		width: 95%;
+	}
+	#sidebar #envio_mensaje .volver a
+	{
+		background: #BFAF66;
+		border-radius: 8px;
+		color: #FFF;
+		display: block;
+		font-size: 22px;
+		height: 22px;
+		padding: 7px 0 5px;
+		text-align: center;
+		text-decoration: none;
+		text-shadow: 2px 1px 1px #8C7F45;
+		width: 100px;
+	}
+	#sidebar #envio_mensaje .volver a:hover
+	{
+		background: #8C7F45;
+		text-decoration: none;
+		text-shadow: 2px 1px 1px #695F32;
+	}
+	#telemedellin
+	{
+		text-align: right; 
+	}
+	#telemedellin img
+	{
+		max-width: 70%;
+	}
+	.aviso
+	{
+		width: 90%;
+	}
+}
+
+@media only screen and (max-width:700px) and (orientation: landscape)
+{
+	#map_canvas
+	{
+		width: 93%;
+	}
+}
+@media only screen and (max-width:400px)
+{
+	#sidebar #envio_mensaje p.val_twitter, 
+	#sidebar #envio_mensaje p.val_email
+	{
+		width: 96%;
+	}
+}
